@@ -14,7 +14,7 @@ module.exports = {
   },
   year,
   IGNORE_EXTENSIONS: ['ai', 'psd', 'xcf'],
-  WEB_ROOT: '/',
+  WEB_ROOT: '/evocell.net/',
 
   OUT_DIR: path.join(process.cwd(), 'docs'),
 }
