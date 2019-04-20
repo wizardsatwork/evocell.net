@@ -1,0 +1,48 @@
+{
+  "name": "evocell.net",
+  "version": "0.23.5",
+  "author": "Wizards & Witches",
+  "license": "AGPL-3.0",
+  "contributors": [
+    {
+      "name": "jascha ehrenreich",
+      "github": "jaeh"
+    },
+    {
+      "name": "philipp tiefenbacher",
+      "github": "wizard23"
+    },
+    {
+      "name": "tom peak",
+      "github": "tompeak"
+    },
+    {
+      "name": "phileas lebada",
+      "github": "norpol"
+    },
+    {
+      "name": "litto",
+      "github": "mslitto"
+    },
+    {
+      "name": "daniel safar",
+      "github": "n1c3"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wizardsatwork/evocell.net.git"
+  },
+  "scripts": {
+    "start": "mspg build serve watch",
+    "build": "NODE_ENV=production mspg build zip",
+    "prod": "NODE_ENV=production mspg build zip serve",
+    "lint:css": "mspg lint css",
+    "lint:html": "mspg lint html"
+  },
+  "devDependencies": {
+    "@mspg/core": "github:mspg/core",
+    "@mspg/transpile-posthtml": "github:mspg/transpile-posthtml",
+    "@mspg/transpile-stylus": "github:mspg/transpile-stylus"
+  }
+}
