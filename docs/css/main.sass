@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,600')
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono')
+
+@import 'mixins'
+@import 'variables'
+
+/*
+ *   GENERAL
+ */
+
+
+html, body
+  @include flex(column, flex-start, center)
+  font-family: 'Poppins'
+  font-size: 16px
+  margin: 0
+  padding: 0
+  padding-top: 30px
+  max-width: 100vw
+  overflow-x: hidden
+  background-image: url('img/bg1.png')
+  padding-bottom: 100px
+
+iframe
+  margin-top: 80px
+  margin-bottom: 60px
+
+.gallery-image
+  width: 60vw
+
+pre
+  font-family: 'Poppins'
+  max-width: 80%
+  text-wrap: wrap
+
+a, a:hover, a:visited, a:active
+  color: #4527A0
+
+.support-us
+    width: 70%
+
+p
+  width: 80%
+  font-size: 18px
+  text-align: left
+
+time, code
+  font-family: 'Roboto Mono'
+  font-size: 19px
+  color: #222
+
+code
+  @include flex(column, center, flex-start)
+  max-width: 70%
+  font-size: 19px
+
+
+h1, h2, h3, h4
+  font-weight: 600
+  color: #000
+
+h1
+  font-size: 24px
+
+.logo
+  margin-top: 40px
+
+
+.center
+  @include flex(column, center, center)
+  width: 100vw
+  min-height: 100vh
+
+.row
+
+  &.movies
+    width: 100%
+    @include flex(column, center, center)
+    margin-top: 100px
+    margin-bottom: 100px
+    padding-left: 50px
+    padding-right: 50px
+
+    iframe
+      margin-top: 20px
+      margin-bottom: 20px
+      border-radius: 6px
+      overflow: hidden
+
+
+  .hexagon
+    @include flex(column, center, center)
+    //width: 370px
+    background: url('https://spacefruit.github.io/evocell.net/img/hexagon.svg')
+    background-size: cover
+    background-position: center
+    overflow: visible
+
+/*
+ *   BREAKPOINTS
+ */
+
+@media screen and (max-width: $breakpoint-mobile)
+  body
+    padding-top: 40px
+
+  iframe
+    width: calc(100% - 40px)
+    margin-left: 20px
+    margin-right: 20px
+
+
+  h2
+    max-width: 60%
+    text-align: center
+
+  .row
+    @include flex(column, center, center)
+    margin: 20px 40px
+
+    .hexagon
+      height: 370px
+      width: 320px
+
+    .hexagon.left
+      margin-bottom: 50px
+      margin-right: 0
+
+
+@media screen and (min-width: $breakpoint-desktop)
+  .row
+    @include flex(row, center, center)
+
+    .hexagon
+      width: 320px
+      height: 370px
+
+    .hexagon.left
+      margin-right: 30px
+
+    .hexagon.right
+      margin-left: 30px
+
+    &.middle
+      margin-top: -50px
+
+
+  
+
